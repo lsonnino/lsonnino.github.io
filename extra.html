@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Lorenzo Sonnino</title>
+
+        <!-- Load fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+        <!-- Load CSS before the page is loaded -->
+        <link rel="stylesheet" type="text/css" href="styles/constants.css"/>
+
+        <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(function(){
+                $("#navbar").load("navbar.html", function() {
+                    document.getElementById("navbar-extra").classList.add("selected");
+                });
+                $("#footer").load("footer.html");
+            });
+        </script>
+        <script>
+            // Based on https://www.w3schools.com/howto/howto_js_filter_table.asp
+            function programSkillFilter() {
+                // Declare variables
+                var input = document.getElementById("program-skill-search-bar");
+                var filter = input.value.toUpperCase();
+                var table = document.getElementById("program-skill-table");
+                var tr = table.getElementsByTagName("tr");
+
+                // Loop through all table rows, and hide those who don't match the search query
+                var i, j, found, td, txtValue;
+                for (i=1 ; i < tr.length ; i++) {
+                    found = false;
+
+                    for (j=0 ; j < 2 ; j++) { // Search the first two columns
+                        td = tr[i].getElementsByTagName("td")[j];
+                        if (td) {
+                            txtValue = td.textContent || td.innerText;
+                            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                                found = true;
+                                break;
+                            }
+                        }
+                    }
+
+                    if (found) {
+                        tr[i].style.display = "";
+                    }
+                    else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        </script>
+    </head>
+
+    <!-- Body -->
+    <body>
+        <!-- Navigation bar -->
+        <div id="navbar">
+            <!-- Content from navbar.html -->
+        </div>
+
+        <!-- Main content -->
+        <div id="content">
+            <!-- Centers of interest -->
+            <div id="interest" class="text">
+                <div class="section">Centers of interest</div>
+                <p>
+                    My main centers of interest can be divided into three categories: <span class="highlight">Engineering, Creative and Sports</span>.
+                </p>
+                <p>
+                    <b class="title">Engineering</b> What interests me in the Engineering domain is RTL Engineering as well as distributed systems.
+                    The focus of my carrer would ideally be <span class="highlight">building high-performance CPU's</span>.
+                </p>
+                <p>
+                    <b class="title">Creative</b> I also enjoy <span class="highlight">creating</span>, whether it is 2D artwork using Adobe Illustrator,
+                    VFX using Nuke or even this website whose code can be found on my GitHub.
+                </p>
+                <p>
+                    <b class="title">Sports</b> During my free-time, I enjoy taking care of my body. In particular, I like <span class="highlight">swimming</span>
+                    as well as playing <span class="highlight">water-polo</span>.
+                </p>
+            </div>
+
+            <!-- Sport -->
+            <div id="sport">
+                <div class="section">Sport</div>
+                <p>
+                    <b class="title">2018 - 2019</b> Water-Polo at my University's club Université Catholique de Louvain
+                </p>
+                <p>
+                    <b class="title">2011 - 2017</b> Water-Polo at the Royal Ixelles Swimming Club (RISC)
+                </p>
+                <p>
+                    <b class="title">2011 - 2016</b> Water-Polo at the Swimming Club Calypso (SCC)
+                </p>
+                <p>
+                    <b class="title">2003 - 2012</b> Swimming at the local Ixelles club: Cercle de Natation d'Ixelles (CNI)
+                </p>
+            </div>
+
+            <!-- Other experiences -->
+            <div id="other">
+                <div class="section">Other experiences</div>
+                <p>
+                    <b class="title">Summer 2018 - 2019</b> Math and Computer Science private tutoring
+                </p>
+                <p>
+                    <b class="title">2016 - 2017</b> Mini-Entreprises with Les Jeunes Entreprises (LJE). I also obtained the European Entrepreneurial Skill Pass
+                </p>
+                <p>
+                    <b class="title">2007 - 2017</b> Flute student at the Academie d'Ixelles. I also did a few public concerts
+                </p>
+                <p>
+                    <b class="title">2007 - 2012</b> Solfeggio student at the Academie d'Ixelles
+                </p>
+            </div>
+
+            <!-- Program skills -->
+            <div id="skill">
+                <div class="section">Program skills</div>
+
+                <input type="text" id="program-skill-search-bar" onkeyup="programSkillFilter()" placeholder="Search for a program..">
+
+                <table id="program-skill-table">
+                    <tr class="header">
+                        <th style="width:35%;">Manufacturer</th>
+                        <th style="width:35%;">Name</th>
+                        <th style="width:30%;">Skill level</th>
+                    </tr>
+                    <tr>
+                        <td>Intel</td>
+                        <td>Quartus Prime</td>
+                        <td>Reasonable</td>
+                    </tr>
+                    <tr>
+                        <td>Intel</td>
+                        <td>ModelSim</td>
+                        <td>Reasonable</td>
+                    </tr>
+                    <tr>
+                        <td>Analog Devices</td>
+                        <td>LTSpice</td>
+                        <td>Advanced</td>
+                    </tr>
+                    <tr>
+                        <td>Git</td>
+                        <td>Git</td>
+                        <td>Advanced</td>
+                    </tr>
+                    <tr>
+                        <td>Mathworks</td>
+                        <td>Matlab</td>
+                        <td>Reasonable</td>
+                    </tr>
+                    <tr>
+                        <td>LaTeX</td>
+                        <td>LaTeX</td>
+                        <td>Advanced</td>
+                    </tr>
+                    <tr>
+                        <td>JetBrains</td>
+                        <td>CLion</td>
+                        <td>Reasonable</td>
+                    </tr>
+                    <tr>
+                        <td>Google</td>
+                        <td>PyCharm</td>
+                        <td>Advanced</td>
+                    </tr>
+                    <tr>
+                        <td>Apple</td>
+                        <td>Xcode</td>
+                        <td>Reasonable</td>
+                    </tr>
+                    <tr>
+                        <td>Google</td>
+                        <td>Android Studio</td>
+                        <td>Reasonable</td>
+                    </tr>
+                    <tr>
+                        <td>Adobe</td>
+                        <td>Illustrator</td>
+                        <td>Advanced</td>
+                    </tr>
+                    <tr>
+                        <td>Microsoft</td>
+                        <td>PowerPoint</td>
+                        <td>Reasonable</td>
+                    </tr>
+                    <tr>
+                        <td>Microsoft</td>
+                        <td>Word</td>
+                        <td>Reasonable</td>
+                    </tr>
+                    <tr>
+                        <td>Microsoft</td>
+                        <td>Excel</td>
+                        <td>Reasonable</td>
+                    </tr>
+                    <tr>
+                        <td>Apple</td>
+                        <td>Numbers</td>
+                        <td>Reasonable</td>
+                    </tr>
+                    <tr>
+                        <td>Apple</td>
+                        <td>Keynote</td>
+                        <td>Reasonable</td>
+                    </tr>
+                    <tr>
+                        <td>Apple</td>
+                        <td>Pages</td>
+                        <td>Reasonable</td>
+                    </tr>
+                    <tr>
+                        <td>Blender</td>
+                        <td>Blender</td>
+                        <td>Basic</td>
+                    </tr>
+                    <tr>
+                        <td>The Foundry</td>
+                        <td>Nuke</td>
+                        <td>Basic</td>
+                    </tr>
+                    <tr>
+                        <td>Adobe</td>
+                        <td>Photoshop</td>
+                        <td>Basic</td>
+                    </tr>
+                    <tr>
+                        <td>Apple</td>
+                        <td>Logic Pro X</td>
+                        <td>Basic</td>
+                    </tr>
+                    <tr>
+                        <td>Apple</td>
+                        <td>Final Cut Pro X</td>
+                        <td>Basic</td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <div class="credits">Icons made by <a href="https://www.flaticon.com/authors/smashicons" title="Smashicons">Smashicons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        </div>
+
+        <!-- Copyright -->
+        <div id="footer">
+            <!-- Content from footer.html -->
+        </div>
+    </body>
+
+    <footer>
+        <!-- Load CSS after the page is loaded -->
+        <link rel="stylesheet" type="text/css" href="styles/index.css"/>
+        <link rel="stylesheet" type="text/css" href="styles/extra.css"/>
+    </footer>
+</html>

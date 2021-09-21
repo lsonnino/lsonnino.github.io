@@ -1,0 +1,43 @@
+.general-text {
+    /* Position */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Text */
+    font-family: 'Roboto', sans-serif;
+    line-height: 1;
+}
+
+.general-image {
+    /* Position */
+    width: 100%;
+    height: 100%;
+    /* Other */
+    object-fit: cover;
+    border-radius: 8%;
+}
+
+.cv-button-container {
+    /* Position */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40pt;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300pt;
+    height: 40pt;
+    /* Color */
+    background-color: var(--accent-color);
+    /* Other */
+    border-radius: 10pt;
+    cursor: pointer;
+    filter: drop-shadow(0 0 3pt grey);
+}
+.cv-button {
+    /* Color */
+    color: white;
+    /* Text */
+    text-decoration: none;
+    font-family: 'Roboto Mono', sans-serif;
+}

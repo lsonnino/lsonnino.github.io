@@ -1,0 +1,114 @@
+/* === MENU === */
+.navbar {
+    /* Position */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    /* Color */
+    background-color: transparent;
+    -webkit-backdrop-filter: blur(10pt);
+    backdrop-filter: blur(10pt);
+    /* Other */
+    overflow: hidden;
+}
+.navbar-container {
+    /* Position */
+    margin: 0;
+    padding: 0;
+    /* Text */
+    text-align: center;
+    /* Other */
+    list-style: none;
+}
+.navbar-container li {
+    /* Position */
+    margin: 0;
+    padding: 0;
+    /* Other */
+    display: inline;
+}
+.navbar-container a {
+    /* Position */
+    margin: auto;
+    padding: 10pt;
+    /* Color */
+    color: var(--bw-1);
+    /* Text */
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+    /* Other */
+    display: inline-block;
+}
+.navbar-container a:hover {
+    /* Color */
+    color: var(--accent-color);
+}
+.navbar-container .selected, .navbar-container .selected:hover {
+    /* Color */
+    background-color: var(--accent-color);
+    color: var(--bw-5);
+    /* Text */
+    font-family: 'Roboto Mono', sans-serif;
+    /* Other */
+    border-radius: 0pt 0pt 7pt 7pt;
+}
+
+/* === CONTENT === */
+#content {
+    padding: 40pt;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+}
+.column {
+    flex: 50%;
+    flex-direction: column;
+}
+
+.simple-text {
+    text-align: center;
+    line-height: 1.4em;
+    margin: 30pt;
+}
+
+.credits {
+    margin: 30pt 0pt -30pt 0pt;
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: smaller;
+    text-decoration: none;
+    font-weight: normal;
+    color: var(--bw-3);
+}
+.credits a {
+    margin: 30pt 0pt -30pt 0pt;
+    font-family: 'Roboto Mono', sans-serif;
+    font-size: smaller;
+    text-decoration: none;
+    font-weight: normal;
+    color: var(--bw-3);
+}
+
+/* === FOOTER === */
+#footer {
+    /* Position */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 5pt;
+    /* Color */
+    background-color: white;
+    color: black;
+    /* Text */
+    font-size: small;
+    text-align: center;
+}

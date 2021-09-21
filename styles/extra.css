@@ -1,0 +1,65 @@
+/* Based on https://www.w3schools.com/howto/howto_js_filter_table.asp */
+
+:root {
+    font-family: 'Roboto', sans-serif;
+}
+
+.section {
+    width: 100%;
+    color: var(--main-color);
+    border-bottom: 2pt solid var(--main-color);
+    border-bottom-left-radius: 1pt;
+    font-size: 2.5em;
+    margin: 50pt 0pt 20pt 0pt;
+}
+
+.text:hover .highlight {
+    color: var(--main-color);
+}
+.text .title {
+    color: var(--dark-color);
+}
+
+/* Table */
+
+#program-skill-search-bar {
+    background-image: url('../img/search.png'); /* Add a search icon to input */
+    background-position: 10px 12px; /* Position the search icon */
+    background-size: auto 50%;
+    opacity: 0.75;
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid var(--bw-4); /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+    color: var(--bw-1);
+    font-family: 'Roboto', sans-serif;
+}
+
+#program-skill-table {
+    border-collapse: collapse; /* Collapse borders */
+    width: 100%; /* Full-width */
+    border: 1px solid var(--bw-4); /* Add a grey border */
+    font-size: 18px; /* Increase font-size */
+    font-family: 'Roboto', sans-serif;
+}
+
+#program-skill-table th, #program-skill-table td {
+    text-align: left; /* Left-align text */
+    padding: 12px; /* Add padding */
+}
+
+#program-skill-table tr {
+    /* Add a bottom border to all table rows */
+    border-bottom: 1px solid var(--bw-4);
+}
+
+#program-skill-table tr.header, #program-skill-table tr.header:hover {
+    background-color: var(--main-color);
+    color: var(--bw-4);
+}
+
+#program-skill-table tr:hover {
+    background-color: var(--light-color);
+    color: var(--bw-1);
+}

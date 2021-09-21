@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Lorenzo Sonnino</title>
+
+        <!-- Load fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+        <!-- Load CSS before the page is loaded -->
+        <link rel="stylesheet" type="text/css" href="styles/constants.css"/>
+
+        <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(function(){
+                // Select the correct navbar
+                $("#navbar").load("navbar.html", function() {
+                    document.getElementById("navbar-contact").classList.add("selected");
+                });
+                $("#footer").load("footer.html");
+            });
+        </script>
+        <script>
+            function toMail1() {
+                window.location = "mailto:sonnino.lorenzo@keio.jp";
+            }
+            function toMail2() {
+                window.location = "mailto:lorenzo.sonnino@student.uclouvain.be";
+            }
+        </script>
+    </head>
+
+    <!-- Body -->
+    <body>
+        <!-- Navigation bar -->
+        <div id="navbar">
+            <!-- Content from navbar.html -->
+        </div>
+
+        <!-- Main content -->
+        <div id="content" class="contact-main-container">
+            <div class="contact-container" onclick="toMail1();">
+                <span class="icon icon-mail" style="flex-grow: 0;"></span>
+                <span class="simple-text contact-text" style="flex-grow: 4;">
+                    sonnino.lorenzo@keio.jp
+                </span>
+            </div>
+            <div class="contact-container" onclick="toMail2();">
+                <span class="simple-text contact-text" style="flex-grow: 4;">
+                    lorenzo.sonnino@student.uclouvain.be
+                </span>
+                <span class="icon icon-mail" style="flex-grow: 0;"></span>
+            </div>
+            <div class="contact-container" onclick="location.href='https://github.com/lsonnino';">
+                <span class="icon icon-github" style="flex-grow: 0;"></span>
+                <span class="simple-text contact-text" style="flex-grow: 4;">
+                    lsonnino
+                </span>
+            </div>
+            <div class="contact-container" onclick="location.href='https://www.linkedin.com/in/lsonnino/';">
+                <span class="simple-text contact-text" style="flex-grow: 4;">
+                    Lorenzo Sonnino
+                </span>
+                <span class="icon icon-linckedin" style="flex-grow: 0;"></span>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div id="footer">
+            <!-- Content from footer.html -->
+        </div>
+    </body>
+
+    <footer>
+        <!-- Load CSS after the page is loaded -->
+        <link rel="stylesheet" type="text/css" href="styles/index.css"/>
+        <link rel="stylesheet" type="text/css" href="styles/contact.css"/>
+    </footer>
+</html>

@@ -1,0 +1,81 @@
+/* Pack */
+body {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-main-container {
+    /* Position */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+}
+.contact-container {
+    /* Position */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    flex-grow : 1;
+    /* Color */
+    color: var(--bw-1);
+    /* Text */
+    font-family: 'Roboto', sans-serif;
+    line-height: 1;
+    /* Other */
+    cursor: pointer;
+}
+.contact-container:hover {
+    /* Color */
+    color: var(--main-color)
+}
+
+/* Text management */
+.contact-text {
+    font-size: 1.3em;
+}
+
+/* Icons management */
+.icon {
+    display: inline-block;
+    width: 100pt;
+    height: 100pt;
+    background-size: cover;
+}
+
+.icon-mail {
+    background-image: url("../img/mail_unselected.svg");
+}
+.contact-container:hover .icon-mail {
+    background-image: url("../img/mail_selected.svg");
+}
+
+.icon-github {
+    background-image: url("../img/github_unselected.svg");
+}
+.contact-container:hover .icon-github {
+    background-image: url("../img/github_selected.svg");
+}
+
+.icon-linckedin {
+    background-image: url("../img/linckedin_unselected.svg");
+}
+.contact-container:hover .icon-linckedin {
+    background-image: url("../img/linckedin_selected.svg");
+}
+
+/* Overrides */
+#footer {
+    position: absolute;
+}

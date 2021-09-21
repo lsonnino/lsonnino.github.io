@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Lorenzo Sonnino</title>
+
+        <!-- Load fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+        <!-- Load CSS before the page is loaded -->
+        <link rel="stylesheet" type="text/css" href="styles/constants.css"/>
+
+        <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(function(){
+                // Load the navigation bar and set the selected element
+                $("#navbar").load("navbar.html", function() {
+                    document.getElementById("navbar-general").classList.add("selected");
+                });
+                // Load the footer
+                $("#footer").load("footer.html");
+            });
+        </script>
+    </head>
+
+    <!-- Body -->
+    <body>
+        <!-- Navigation bar -->
+        <div id="navbar">
+            <!-- Content from navbar.html -->
+        </div>
+
+        <!-- Main content -->
+        <div id="content">
+            <div class="row" style="height: 85vh;">
+                <div class="column general-text">
+                    <span style="font-size: 2em; font-weight: bold; letter-spacing: 8pt; padding: 10pt; color: var(--main-color);">
+                        LORENZO SONNINO
+                    </span>
+                    <span style="font-size: 1.7em;">
+                        Electrical Engineer
+                    </span>
+                </div>
+                <div class="column">
+                    <img class="general-image" src="img/general_1.jpg"/>
+                </div>
+            </div>
+
+            <div class="row" style="height: 85vh;">
+                <div class="column">
+                    <img class="general-image" src="img/general_2.jpg"/>
+                </div>
+                <div class="column general-text" style="font-size: 1.3em;">
+                    <p class="simple-text">
+                        I was born on August 15th 1999 in Belgium.<br>
+                        I currently have one master degree in Electrical Engineering.
+                        More information can be found on my background on the <a href="./background" style="color: black; text-decoration: none;">Background</a>
+                        section.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row" style="height: 85vh;">
+                <div class="column general-text" style="font-size: 1.3em;">
+                    <p class="simple-text">
+                        I speak natively French and Italian.<br>
+                        I am fluent in English, have a scholar level in Dutch and I am currently learning Japanese.
+                    </p>
+                </div>
+                <div class="column">
+                    <img class="general-image" src="img/general_3.jpg"/>
+                </div>
+            </div>
+
+            <div class="cv-button-container" onclick="location.href='files/cv.pdf';">
+                <span class="cv-button">Download my CV</span>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div id="footer">
+            <!-- Content from footer.html -->
+        </div>
+    </body>
+
+    <footer>
+        <!-- Load CSS after the page is loaded -->
+        <link rel="stylesheet" type="text/css" href="styles/index.css"/>
+        <link rel="stylesheet" type="text/css" href="styles/general.css"/>
+    </footer>
+</html>

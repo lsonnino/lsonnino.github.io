@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Lorenzo Sonnino</title>
+
+        <!-- Load fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+        <!-- Load CSS before the page is loaded -->
+        <link rel="stylesheet" type="text/css" href="styles/constants.css"/>
+
+        <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(function(){
+                $("#navbar").load("navbar.html", function() {
+                    document.getElementById("navbar-background").classList.add("selected");
+                });
+                $("#footer").load("footer.html");
+            });
+        </script>
+    </head>
+
+    <!-- Body -->
+    <body>
+        <!-- Navigation bar -->
+        <div id="navbar">
+            <!-- Content from navbar.html -->
+        </div>
+
+        <!-- Main content -->
+        <div id="content">
+            <!-- Based on https://www.w3schools.com/howto/howto_css_timeline.asp -->
+            <div class="timeline">
+                <div class="container left">
+                    <div class="content">
+                        <h2>2021 - 2023</h2>
+                        <p onclick="location.href='https://st.keio.ac.jp/';" style="cursor: pointer;"><img src="img/loc.png" width="15pt" height="15pt"> Keio University - Tokyo, Japan</p>
+                        <p><b class="highlight">Master Degree</b> in <span class="highlight">Electrical Engineering</span>, with the <span class="highlight">T.I.M.E. Double Degree program</span></p>
+                        <p>Focus on <span class="highlight">computer electronics and distributed systems</span>. The complete course list can be given on request.</p>
+                    </div>
+                </div>
+                <div class="container right">
+                    <div class="content">
+                        <h2>2020 - 2023</h2>
+                        <p onclick="location.href='https://uclouvain.be/';" style="cursor: pointer;"><img src="img/loc.png" width="15pt" height="15pt"> Université Catholique de Louvain - Louvain-La-Neuve, Belgium</p>
+                        <p><b class="highlight">Master Degree</b> in <span class="highlight">Electrical Engineering</span>, option in <span class="highlight">Electronic Circuits and Systems and Information and Signal Processing</span></p>
+                        <p>Focus on <span class="highlight">computer electronics and distributed systems</span>. The complete course list can be given on request.</p>
+                    </div>
+                </div>
+                <div class="container left">
+                    <div class="content">
+                        <h2>2017 - 2020</h2>
+                        <p onclick="location.href='https://uclouvain.be/';" style="cursor: pointer;"><img src="img/loc.png" width="15pt" height="15pt"> Université Catholique de Louvain - Louvain-La-Neuve, Belgium</p>
+                        <p><b class="highlight">Bachelor Degree</b> in <span class="highlight">Engineering</span>, option in <span class="highlight">Electronics and Computer Science</span></p>
+                        <p>The complete course list can be given on request.</p>
+                    </div>
+                </div>
+                <div class="container right">
+                    <div class="content">
+                        <h2>2011 - 2017</h2>
+                        <p onclick="location.href='https://secondaire.saint-boni.be/';" style="cursor: pointer;"><img src="img/loc.png" width="15pt" height="15pt"> Institut Saint-Boniface Parnasse - Bruxelles, Belgium</p>
+                        <p><b class="highlight">High School</b> orientation <span class="highlight">Latin - Mathematics</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="credits">Icons made by <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+        </div>
+
+        <!-- Copyright -->
+        <div id="footer">
+            <!-- Content from footer.html -->
+        </div>
+    </body>
+
+    <footer>
+        <!-- Load CSS after the page is loaded -->
+        <link rel="stylesheet" type="text/css" href="styles/index.css"/>
+        <link rel="stylesheet" type="text/css" href="styles/background.css"/>
+    </footer>
+</html>
