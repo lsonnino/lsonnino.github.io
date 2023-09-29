@@ -8,13 +8,16 @@
     line-height: 1;
 }
 
+.general-image-container {
+    border-radius: 8%;
+    box-shadow: inset 0px 0px 30pt rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+}
 .general-image {
     /* Position */
+    position: relative;
     width: 100%;
-    height: 100%;
-    /* Other */
-    object-fit: cover;
-    border-radius: 8%;
+    z-index: -2;
 }
 
 .cv-button-container {

@@ -24,11 +24,8 @@
             });
         </script>
         <script>
-            function toMail1() {
+            function toMail() {
                 window.location = "mailto:lsonnino@am.ics.keio.ac.jp";
-            }
-            function toMail2() {
-                window.location = "mailto:lorenzo.sonnino@student.uclouvain.be";
             }
         </script>
     </head>
@@ -41,31 +38,44 @@
         </div>
 
         <!-- Main content -->
-        <div id="content" class="contact-main-container">
-            <div class="contact-container" onclick="toMail1();">
-                <span class="icon icon-mail" style="flex-grow: 0;"></span>
-                <span class="simple-text contact-text" style="flex-grow: 4;">
-                    sonnino.lorenzo@keio.jp
+        <div>
+            <div id="contact-parent" data-current-id="contact-mail">
+
+                <span class="contact-container" id="contact-github" onclick="location.href='https://github.com/lsonnino';">
+                    <div class="contact-img">
+                        <img src="img/github.svg">
+                    </div>
+                    <div class="contact-text">
+                        <h2>GitHub</h2>
+                        <p>lsonnino</p>
+                    </div>
                 </span>
-            </div>
-            <div class="contact-container" onclick="toMail2();">
-                <span class="simple-text contact-text" style="flex-grow: 4;">
-                    lorenzo.sonnino@student.uclouvain.be
+                    
+                <span class="contact-container" id="contact-mail" onclick="toMail();">
+                    <div class="contact-img">
+                        <img src="img/mail.svg">
+                    </div>
+                    <div class="contact-text">
+                        <h2>Mail</h2>
+                        <p>sonnino.lorenzo@keio.jp</p>
+                    </div>
                 </span>
-                <span class="icon icon-mail" style="flex-grow: 0;"></span>
-            </div>
-            <div class="contact-container" onclick="location.href='https://github.com/lsonnino';">
-                <span class="icon icon-github" style="flex-grow: 0;"></span>
-                <span class="simple-text contact-text" style="flex-grow: 4;">
-                    lsonnino
+                    
+                <span class="contact-container" id="contact-linkedin" onclick="location.href='https://www.linkedin.com/in/lsonnino/';">
+                    <div class="contact-img">
+                        <img src="img/linkedin.svg">
+                    </div>
+                    <div class="contact-text">
+                        <h2>LinkedIn</h2>
+                        <p>Lorenzo Sonnino</p>
+                    </div>
                 </span>
+            
+                
             </div>
-            <div class="contact-container" onclick="location.href='https://www.linkedin.com/in/lsonnino/';">
-                <span class="simple-text contact-text" style="flex-grow: 4;">
-                    Lorenzo Sonnino
-                </span>
-                <span class="icon icon-linckedin" style="flex-grow: 0;"></span>
-            </div>
+            <h2 id="contact-title">
+                contact me :
+            </h2>
         </div>
 
         <!-- Copyright -->
@@ -79,4 +89,5 @@
         <link rel="stylesheet" type="text/css" href="styles/index.css"/>
         <link rel="stylesheet" type="text/css" href="styles/contact.css"/>
     </footer>
+    <script src="scripts/contact.js"></script>
 </html>
