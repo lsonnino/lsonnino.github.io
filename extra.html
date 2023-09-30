@@ -127,133 +127,135 @@
 
                 <input type="text" id="program-skill-search-bar" onkeyup="programSkillFilter()" placeholder="Search for a program..">
 
-                <table id="program-skill-table">
-                    <tr class="header">
-                        <th style="width:35%;">Manufacturer</th>
-                        <th style="width:35%;">Name</th>
-                        <th style="width:30%;">Skill level</th>
-                    </tr>
-                    <tr>
-                        <td>Synopsys</td>
-                        <td>Design Compiler NX</td>
-                        <td>Basic</td>
-                    </tr>
-                    <tr>
-                        <td>Cacti</td>
-                        <td>Cacti 7</td>
-                        <td>Basic</td>
-                    </tr>
-                    <tr>
-                        <td>Intel</td>
-                        <td>Quartus Prime</td>
-                        <td>Reasonable</td>
-                    </tr>
-                    <tr>
-                        <td>Intel</td>
-                        <td>ModelSim</td>
-                        <td>Reasonable</td>
-                    </tr>
-                    <tr>
-                        <td>Analog Devices</td>
-                        <td>LTSpice</td>
-                        <td>Advanced</td>
-                    </tr>
-                    <tr>
-                        <td>Git</td>
-                        <td>Git</td>
-                        <td>Advanced</td>
-                    </tr>
-                    <tr>
-                        <td>MathWorks</td>
-                        <td>Matlab</td>
-                        <td>Reasonable</td>
-                    </tr>
-                    <tr>
-                        <td>LaTeX</td>
-                        <td>LaTeX</td>
-                        <td>Advanced</td>
-                    </tr>
-                    <tr>
-                        <td>JetBrains</td>
-                        <td>CLion</td>
-                        <td>Reasonable</td>
-                    </tr>
-                    <tr>
-                        <td>JetBrains</td>
-                        <td>PyCharm</td>
-                        <td>Advanced</td>
-                    </tr>
-                    <tr>
-                        <td>Apple</td>
-                        <td>Xcode</td>
-                        <td>Reasonable</td>
-                    </tr>
-                    <tr>
-                        <td>Google</td>
-                        <td>Android Studio</td>
-                        <td>Reasonable</td>
-                    </tr>
-                    <tr>
-                        <td>Adobe</td>
-                        <td>Illustrator</td>
-                        <td>Advanced</td>
-                    </tr>
-                    <tr>
-                        <td>Microsoft</td>
-                        <td>PowerPoint</td>
-                        <td>Reasonable</td>
-                    </tr>
-                    <tr>
-                        <td>Microsoft</td>
-                        <td>Word</td>
-                        <td>Reasonable</td>
-                    </tr>
-                    <tr>
-                        <td>Microsoft</td>
-                        <td>Excel</td>
-                        <td>Reasonable</td>
-                    </tr>
-                    <tr>
-                        <td>Apple</td>
-                        <td>Numbers</td>
-                        <td>Reasonable</td>
-                    </tr>
-                    <tr>
-                        <td>Apple</td>
-                        <td>Keynote</td>
-                        <td>Reasonable</td>
-                    </tr>
-                    <tr>
-                        <td>Apple</td>
-                        <td>Pages</td>
-                        <td>Reasonable</td>
-                    </tr>
-                    <tr>
-                        <td>Blender</td>
-                        <td>Blender</td>
-                        <td>Basic</td>
-                    </tr>
-                    <tr>
-                        <td>The Foundry</td>
-                        <td>Nuke</td>
-                        <td>Basic</td>
-                    </tr>
-                    <tr>
-                        <td>Adobe</td>
-                        <td>Photoshop</td>
-                        <td>Basic</td>
-                    </tr>
-                    <tr>
-                        <td>Apple</td>
-                        <td>Logic Pro X</td>
-                        <td>Basic</td>
-                    </tr>
-                    <tr>
-                        <td>Apple</td>
-                        <td>Final Cut Pro X</td>
-                        <td>Basic</td>
-                    </tr>
-                </table>
+                <div id="program-skill-table-parent">
+                    <table id="program-skill-table">
+                        <tr class="header">
+                            <th style="width:35%;">Manufacturer</th>
+                            <th style="width:35%;">Name</th>
+                            <th style="width:30%;">Skill level</th>
+                        </tr>
+                        <tr>
+                            <td>Synopsys</td>
+                            <td>Design Compiler NX</td>
+                            <td>Basic</td>
+                        </tr>
+                        <tr>
+                            <td>Cacti</td>
+                            <td>Cacti 7</td>
+                            <td>Basic</td>
+                        </tr>
+                        <tr>
+                            <td>Intel</td>
+                            <td>Quartus Prime</td>
+                            <td>Reasonable</td>
+                        </tr>
+                        <tr>
+                            <td>Intel</td>
+                            <td>ModelSim</td>
+                            <td>Reasonable</td>
+                        </tr>
+                        <tr>
+                            <td>Analog Devices</td>
+                            <td>LTSpice</td>
+                            <td>Advanced</td>
+                        </tr>
+                        <tr>
+                            <td>Git</td>
+                            <td>Git</td>
+                            <td>Advanced</td>
+                        </tr>
+                        <tr>
+                            <td>MathWorks</td>
+                            <td>Matlab</td>
+                            <td>Reasonable</td>
+                        </tr>
+                        <tr>
+                            <td>LaTeX</td>
+                            <td>LaTeX</td>
+                            <td>Advanced</td>
+                        </tr>
+                        <tr>
+                            <td>JetBrains</td>
+                            <td>CLion</td>
+                            <td>Reasonable</td>
+                        </tr>
+                        <tr>
+                            <td>JetBrains</td>
+                            <td>PyCharm</td>
+                            <td>Advanced</td>
+                        </tr>
+                        <tr>
+                            <td>Apple</td>
+                            <td>Xcode</td>
+                            <td>Reasonable</td>
+                        </tr>
+                        <tr>
+                            <td>Google</td>
+                            <td>Android Studio</td>
+                            <td>Reasonable</td>
+                        </tr>
+                        <tr>
+                            <td>Adobe</td>
+                            <td>Illustrator</td>
+                            <td>Advanced</td>
+                        </tr>
+                        <tr>
+                            <td>Microsoft</td>
+                            <td>PowerPoint</td>
+                            <td>Reasonable</td>
+                        </tr>
+                        <tr>
+                            <td>Microsoft</td>
+                            <td>Word</td>
+                            <td>Reasonable</td>
+                        </tr>
+                        <tr>
+                            <td>Microsoft</td>
+                            <td>Excel</td>
+                            <td>Reasonable</td>
+                        </tr>
+                        <tr>
+                            <td>Apple</td>
+                            <td>Numbers</td>
+                            <td>Reasonable</td>
+                        </tr>
+                        <tr>
+                            <td>Apple</td>
+                            <td>Keynote</td>
+                            <td>Reasonable</td>
+                        </tr>
+                        <tr>
+                            <td>Apple</td>
+                            <td>Pages</td>
+                            <td>Reasonable</td>
+                        </tr>
+                        <tr>
+                            <td>Blender</td>
+                            <td>Blender</td>
+                            <td>Basic</td>
+                        </tr>
+                        <tr>
+                            <td>The Foundry</td>
+                            <td>Nuke</td>
+                            <td>Basic</td>
+                        </tr>
+                        <tr>
+                            <td>Adobe</td>
+                            <td>Photoshop</td>
+                            <td>Basic</td>
+                        </tr>
+                        <tr>
+                            <td>Apple</td>
+                            <td>Logic Pro X</td>
+                            <td>Basic</td>
+                        </tr>
+                        <tr>
+                            <td>Apple</td>
+                            <td>Final Cut Pro X</td>
+                            <td>Basic</td>
+                        </tr>
+                    </table>
+                </div>
             </div>
 
 

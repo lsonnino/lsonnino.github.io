@@ -22,15 +22,22 @@
 
 /* Table */
 
+#program-skill-table-parent {
+    border: 1px solid var(--main-color);
+    border-radius: 5pt;
+    overflow: hidden;
+}
+
 #program-skill-search-bar {
     background-image: url('../img/search.png'); /* Add a search icon to input */
-    background-position: 10px 12px; /* Position the search icon */
-    background-size: auto 50%;
+    background-position: 10px 13px; /* Position the search icon */
+    background-size: auto 40%;
     opacity: 0.75;
     background-repeat: no-repeat; /* Do not repeat the icon image */
     font-size: 16px; /* Increase font-size */
     padding: 12px 20px 12px 40px; /* Add some padding */
     border: 1px solid var(--bw-4); /* Add a grey border */
+    border-radius: 5pt 5pt 2pt 2pt;
     margin-bottom: 12px; /* Add some space below the input */
     color: var(--bw-1);
     font-family: 'Roboto', sans-serif;
@@ -39,7 +46,6 @@
 #program-skill-table {
     border-collapse: collapse; /* Collapse borders */
     width: 100%; /* Full-width */
-    border: 1px solid var(--bw-4); /* Add a grey border */
     font-size: 18px; /* Increase font-size */
     font-family: 'Roboto', sans-serif;
 }
@@ -56,10 +62,11 @@
 
 #program-skill-table tr.header, #program-skill-table tr.header:hover {
     background-color: var(--main-color);
-    color: var(--bw-4);
+    color: var(--bw-5);
 }
 
 #program-skill-table tr:hover {
     background-color: var(--light-color);
     color: var(--bw-1);
+    border: 1px solid var(--accent-color);
 }

@@ -11,7 +11,7 @@
 
             const scrollValue = (windowPosition + screenHeight - containerPosition) / (screenHeight + containerHeight);
             const imagePositionMax = imageHeight - containerHeight;
-            const position = Math.max(scrollValue, 0) * imagePositionMax;
+            const position = imagePositionMax - Math.max(scrollValue, 0) * imagePositionMax;
 
             image.animate({ top: -position }, {duration: 10, fill: "forwards"});
         });

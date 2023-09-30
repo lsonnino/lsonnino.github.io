@@ -1,22 +1,9 @@
 #contact-parent {
     position: relative;
-    border: 2px solid var(--background-color);
     border-radius: 10pt;
     text-align: center;
-    padding: 2% 5% 1% 5%;
+    padding: 0% 5% 5%; /* top, left-right, bottom */
     margin: 0% 10%;
-}
-#contact-title {
-    position: absolute;
-    left: 50%;
-    margin: 0pt 0pt;
-    padding: 0pt 10pt;
-    background-color: white;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
-    color: var(--bw-1);
-    z-index: 1;
 }
   
 .contact-container {
