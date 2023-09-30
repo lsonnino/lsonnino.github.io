@@ -2,7 +2,7 @@
     position: relative;
     border-radius: 10pt;
     text-align: center;
-    padding: 0% 5% 5%; /* top, left-right, bottom */
+    padding: 0% 5% 3%; /* top, left-right, bottom */
     margin: 0% 10%;
 }
   
@@ -77,8 +77,8 @@
     width: 70%;
 }
 .contact-container.active .contact-img {
-    animation: fade 0.25s linear forwards reverse;
+    animation: fade 0.25s ease-in-out forwards reverse;
 }
 .contact-container.active .contact-text {
-    animation: fade 0.25s linear forwards normal;
+    animation: fade 0.25s ease-in-out forwards normal;
 }
