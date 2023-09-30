@@ -13,7 +13,7 @@
             const imagePositionMax = imageHeight - containerHeight;
             const position = imagePositionMax - Math.max(scrollValue, 0) * imagePositionMax;
 
-            image.animate({ top: -position }, {duration: 10, fill: "forwards"});
+            image.animate({ top: -position }, {duration: 1, fill: "forwards"});
         });
     });
 })();
