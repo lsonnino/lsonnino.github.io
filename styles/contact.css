@@ -5,6 +5,46 @@
     padding: 0% 5% 3%; /* top, left-right, bottom */
     margin: 0% 10%;
 }
+@media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */
+    #contact-parent {
+        margin: 0% 10%;
+    }
+}
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+    #contact-parent {
+        margin: 0% 10%;
+    }
+}
+@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    #contact-parent {
+        margin: 0% 10%;
+    }
+}
+@media (min-width:800px)  { /* Custom */
+    #contact-parent {
+        margin: 0% 0%;
+    }
+}
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
+    #contact-parent {
+        margin: 0% 5%;
+    }
+}
+@media (min-width:980px)  { /* Custom */
+    #contact-parent {
+        margin: 0% 5%;
+    }
+}
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */
+    #contact-parent {
+        margin: 0% 10%;
+    }
+}
+@media (min-width:1150px) { /* Custom */
+    #contact-parent {
+        margin: 0% 10%;
+    }
+}
   
 .contact-container {
     display: inline-block;
@@ -12,7 +52,8 @@
     background-color: var(--main-color);
     position: relative;
     width: 10%;
-    height: 100px;
+    min-width: 6em;
+    height: 6em;
     transition: all 0.3s;
     cursor: pointer;
     vertical-align: middle;

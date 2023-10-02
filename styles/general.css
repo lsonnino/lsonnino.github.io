@@ -9,15 +9,62 @@
 }
 
 .general-image-container {
-    border-radius: 8%;
+    border-radius: 3.5em;
     box-shadow: inset 0px 0px 30pt rgba(0, 0, 0, 0.6);
     overflow: hidden;
+    aspect-ratio: 18/19;
 }
 .general-image {
     /* Position */
     position: relative;
     width: 100%;
     z-index: -2;
+}
+
+@media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */
+    #ls-text {
+        font-size: 2em;
+        letter-spacing: 0.33em;
+    }
+}
+@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+    #ls-text {
+        font-size: 2em;
+    }
+}
+@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    #ls-text {
+        letter-spacing: 0.33em;
+        font-size: 2em;
+    }
+}
+@media (min-width:800px)  { /* Custom */
+    #ls-text {
+        letter-spacing: 0.2em;
+        font-size: 1.5em;
+    }
+}
+@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */
+    #ls-text {
+        letter-spacing: 0.2em;
+        font-size: 1.7em;
+    }
+}
+@media (min-width:980px)  { /* Custom */
+    #ls-text {
+        letter-spacing: 0.33em;
+        font-size: 1.7em;
+    }
+}
+@media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */
+    #ls-text {
+        font-size: 1.7em;
+    }
+}
+@media (min-width:1150px) { /* Custom */
+    #ls-text {
+        font-size: 2em;
+    }
 }
 
 .cv-button-container {
