@@ -7,6 +7,9 @@
     font-family: 'Roboto', sans-serif;
     line-height: 1;
 }
+.general-text a {
+    color: black;
+}
 
 .general-image-container {
     border-radius: 3.5em;
@@ -21,21 +24,64 @@
     z-index: -2;
 }
 
-@media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */
-    #ls-text {
-        font-size: 2em;
-        letter-spacing: 0.33em;
+/*
+@media (min-width:320px)  { smartphones, iPhone, portrait 480x320 phones
+@media (min-width:481px)  { portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide.
+@media (min-width:641px)  { portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones
+*/
+@media (max-width:799px)  {
+    #content {
+        padding: 0;
+        margin: 0;
     }
-}
-@media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
-    #ls-text {
-        font-size: 2em;
+
+    .general-text {
+        /* Position */
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+        background-color: rgba(0, 0, 0, 0.6);
+        color: white;
+        margin: 0;
+        left: 0;
+        text-align: center;
     }
-}
-@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    .general-text p {
+        position: relative;
+        margin: 0 30pt;
+        top: 50%;
+        vertical-align: middle;
+        -ms-transform: translate(0%, -50%);
+        transform: translate(0%, -50%);
+    }
+    .general-text a{
+        color: white;
+    }
+    .general-image-container {
+        width: 100%;
+        border-radius: 0;
+        aspect-ratio: 16/9;
+        z-index: -2;
+    }
+
+    .row {
+        position: relative;
+        display: block;
+        margin: 3em 0em;
+    }
+    .column {
+        display: inline-block;
+        width: 100%;
+    }
+
     #ls-text {
+        position: relative;
+        display: block;
         letter-spacing: 0.33em;
         font-size: 2em;
+        margin-top: 5%;
+        margin-bottom: 2%;
     }
 }
 @media (min-width:800px)  { /* Custom */
