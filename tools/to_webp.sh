@@ -11,7 +11,7 @@ for f in * ; do
             fn="${f%.*}"
 
             # Convert f to f.webp
-            convert $f $fn.webp
+            convert $f -auto-orient $fn.webp
 
             # Delete the old file
             rm $f
