@@ -143,9 +143,16 @@
                 });
                 // Load the footer
                 $("#footer").load("footer.html");
-
-                alert("Website under construction");
             });
+        </script>
+
+        <script language="Javascript">
+            window.onload=function(){
+                var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windows\sce|palm/i.test(navigator.userAgent.toLowerCase()));
+                if (mobile) {
+                    alert("Website's mobile version is under construction. Visit this on desktop for a better experience");
+                }
+            }
         </script>
     </footer>
 
