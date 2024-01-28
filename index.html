@@ -2,35 +2,26 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <meta name="description" content="Lorenzo Sonnino, Electrical Engineer">
-        <meta name="keywords" content="Lorenzo, Sonnino, Engineer, Electrical Engineering">
         <meta name="author" content="Lorenzo Sonnino">
+        <meta name="keywords" content="Lorenzo, Sonnino, Engineer, Electrical Engineering">
+        <meta name="description" content="Lorenzo Sonnino, Electrical Engineer">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>Lorenzo Sonnino</title>
 
         <!-- Load fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+
+        <noscript>  <!-- For users with Javascript disabled -->
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+        </noscript>
+        <link media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+        <link media="print" onload="this.onload=null;this.removeAttribute('media');" href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
 
         <!-- Load CSS before the page is loaded -->
         <link rel="stylesheet" type="text/css" href="styles/constants.css"/>
-
-        <!-- Scripts -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script>
-            $(function(){
-                // Load the navigation bar and set the selected element
-                $("#navbar").load("navbar.html", function() {
-                    document.getElementById("navbar-general").classList.add("selected");
-                });
-                // Load the footer
-                $("#footer").load("footer.html");
-
-                alert("Website under construction");
-            });
-        </script>
     </head>
 
     <!-- Body -->
@@ -52,13 +43,13 @@
                     </span>
                 </div>
                 <div class="column general-image-container">
-                    <img class="general-image" src="img/general_1.jpg"/>
+                    <img class="general-image" width="50vw" src="img/general_1-l.webp" srcset="img/general_1-xs.webp 242w, img/general_1-s.webp 524w, img/general_1-m.webp 1008w, img/general_1-l.webp 2016w, img/general_1-xl.webp 4032w" sizes="50vw" alt=""/>
                 </div>
             </div>
 
             <div class="row">
                 <div class="column general-image-container">
-                    <img class="general-image" src="img/general_2.jpg"/>
+                    <img class="general-image" width="50vw" src="img/general_2-l.webp" srcset="img/general_2-xs.webp 242w, img/general_2-s.webp 524w, img/general_2-m.webp 1008w, img/general_2-l.webp 2016w, img/general_2-xl.webp 4032w" sizes="50vw" alt=""/>
                 </div>
                 <div class="column general-text" style="font-size: 1.3em;">
                     <p class="simple-text">
@@ -77,7 +68,7 @@
                     </p>
                 </div>
                 <div class="column general-image-container">
-                    <img class="general-image" src="img/general_3.jpg"/>
+                    <img class="general-image" width="50vw" src="img/general_3-l.webp" srcset="img/general_3-xs.webp 242w, img/general_3-s.webp 524w, img/general_3-m.webp 1008w, img/general_3-l.webp 2016w, img/general_3-xl.webp 4032w" sizes="50vw" alt=""/>
                 </div>
             </div>
 
@@ -92,7 +83,7 @@
             
             <span class="contact-container" id="contact-github" onclick="location.href='https://github.com/lsonnino';">
                 <div class="contact-img">
-                    <img src="img/github.svg">
+                    <img src="img/github.svg" alt="link to my GitHub">
                 </div>
                 <div class="contact-text">
                     <div class="contact-text-wrap">
@@ -104,7 +95,7 @@
                     
             <span class="contact-container" id="contact-mail" onclick="toMail();">
                 <div class="contact-img">
-                    <img src="img/mail.svg">
+                    <img src="img/mail.svg"  alt="send me an email">
                 </div>
                 <div class="contact-text">
                     <div class="contact-text-wrap">
@@ -116,7 +107,7 @@
                     
             <span class="contact-container" id="contact-linkedin" onclick="location.href='https://www.linkedin.com/in/lsonnino/';">
                 <div class="contact-img">
-                    <img src="img/linkedin.svg">
+                    <img src="img/linkedin.svg"  alt="link to my LinkedIn">
                 </div>
                 <div class="contact-text">
                     <div class="contact-text-wrap">
@@ -139,8 +130,23 @@
         <link rel="stylesheet" type="text/css" href="styles/index.css"/>
         <link rel="stylesheet" type="text/css" href="styles/general.css"/>
         <link rel="stylesheet" type="text/css" href="styles/contact.css"/>
+
+        <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            $(function(){
+                // Load the navigation bar and set the selected element
+                $("#navbar").load("navbar.html", function() {
+                    document.getElementById("navbar-general").classList.add("selected");
+                });
+                // Load the footer
+                $("#footer").load("footer.html");
+
+                alert("Website under construction");
+            });
+        </script>
     </footer>
 
-    <script src="scripts/index.js"></script>
-    <script src="scripts/contact.js"></script>
+    <script defer src="scripts/index.js"></script>
+    <script async src="scripts/contact.js"></script>
 </html>
